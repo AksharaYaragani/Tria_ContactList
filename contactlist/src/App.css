@@ -1,0 +1,297 @@
+:root {
+  --color-primary: #ff6b81;
+  --color-primary-dark: #e85c70;
+  --color-bg: #fceff1;
+  --color-card-bg: #fff7f9;
+  --color-white: #ffffff;
+  --color-border: #e2c8d8;
+  --color-text-dark: #352f44;
+  --color-text-light: #746f7d;
+  --radius-m: 10px;
+  --radius-l: 16px;
+}
+body {
+  background: linear-gradient(135deg, #fff1e6, #ffe4ec);
+  font-family: "Inter", "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 60px 20px;
+  margin: 0;
+  color: var(--color-text-dark);
+}
+.app {
+  background: linear-gradient(180deg, #fff8f9, #f9e6ec);
+  padding: 50px 80px;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(255, 182, 193, 0.25);
+  width: 100%;
+  max-width: 1100px;
+  border: 1px solid #f3d6de;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.3em;
+  margin-bottom: 6px;
+  color: #402b3a;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b81, #ff9eb1);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.95em;
+  margin-bottom: 20px;
+}
+
+.contact-summary {
+  display: flex;
+  justify-content: space-between;
+  background: #fff3f5;
+  border: 1px solid #f4c7d5;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 1em;
+  color: var(--color-text-dark);
+  box-shadow: 0 2px 6px rgba(255, 182, 193, 0.2);
+}
+
+.search-bar {
+  width: 100%;
+  background-color: #fff5f7;
+  border: 1px solid #f4c7d5;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(255, 107, 129, 0.3);
+}
+
+.contact-section {
+  background: linear-gradient(135deg, #fff3f6, #fbe0eb);
+  border: 1px solid #f3cad5;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.2);
+  margin-bottom: 24px;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #fff8fb, #ffe4ee);
+  border: 1px solid #f3cdd8;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
+  transition: all 0.25s ease;
+  animation: fadeSlideIn 0.4s ease-in;
+}
+
+.contact-card:hover {
+  background-color: #ffeaf1;
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 107, 129, 0.25);
+}
+
+.contact-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.15em;
+  color: #d6336c;
+}
+
+.contact-card p {
+  margin: 3px 0;
+  color: var(--color-text-light);
+  font-size: 0.95em;
+}
+
+.highlight {
+  background-color: #fff3b0;
+  color: #000;
+  font-weight: 600;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.add-section {
+  background: linear-gradient(135deg, #fff3f5, #ffe4ec);
+  border: 1px solid #f3cad5;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.25);
+}
+
+h2 {
+  text-align: center;
+  color: #442b3a;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.add-form input {
+  width: 92%;
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid #e5b8c7;
+  background-color: #fff8fa;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  margin: 0 auto;
+}
+
+.add-form input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(255, 107, 129, 0.25);
+  background-color: #fff;
+}
+
+button {
+  background: linear-gradient(90deg, #ff7f94, #ff4d6d);
+  color: var(--color-white);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(255, 107, 129, 0.25);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff4d6d, #d6336c);
+  box-shadow: 0 5px 14px rgba(255, 107, 129, 0.35);
+  transform: translateY(-1px);
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-btn {
+  background: linear-gradient(90deg, #6ba8ff, #3a86ff);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.9em;
+  transition: all 0.25s ease;
+}
+
+.edit-btn:hover {
+  background: #265dbe;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: linear-gradient(90deg, #ff6b81, #ff3b57);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.9em;
+  transition: all 0.25s ease;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #e63950, #c1121f);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-card.edit-mode {
+  background: linear-gradient(135deg, #fff6f8, #ffe0ea);
+  border: 1px solid #f3b9c8;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 6px 14px rgba(255, 182, 193, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-card.edit-mode form {
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;
+}
+
+.contact-card.edit-mode input {
+  width: 90%;
+  border-radius: 12px; 
+  padding: 10px 14px;
+  border: 1px solid #f2c2d0;
+  background-color: #fff8fa;
+  font-size: 0.95em;
+  color: #352f44;
+  transition: all 0.25s ease;
+}
+
+.contact-card.edit-mode input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(255, 107, 129, 0.25);
+  background-color: #fff;
+  outline: none;
+}
+
+.contact-card.edit-mode .card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.contact-card.edit-mode .edit-btn {
+  background: linear-gradient(90deg, #6ba8ff, #3a86ff);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(58, 134, 255, 0.25);
+}
+
+.contact-card.edit-mode .delete-btn {
+  background: linear-gradient(90deg, #ff6b81, #ff3b57);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 107, 129, 0.25);
+}
